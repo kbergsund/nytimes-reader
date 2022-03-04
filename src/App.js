@@ -21,7 +21,7 @@ function App() {
         byline: story.byline,
         published: story.published_date,
         image: story.multimedia[0].url,
-        imageCaption: story.multimedia[0].caption
+        imageCaption: story.multimedia[0].caption,
       }
     }))).then(() => memoizeStorySections)
   }, [])
