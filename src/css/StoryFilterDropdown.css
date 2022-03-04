@@ -1,0 +1,9 @@
+.story-filter-dropdown {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+select {
+  width: 40%;
+}
