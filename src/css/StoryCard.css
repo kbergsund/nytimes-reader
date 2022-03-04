@@ -1,9 +1,14 @@
 .story-card {
-  width: 60%;
-  margin: 2em;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0 1px 9px -5px;
+  border: 1px solid black;
+}
+
+a {
+  margin: 1em;
+  text-decoration: none;
+  color: #000;
+  width: 60%;
 }
 
 img {

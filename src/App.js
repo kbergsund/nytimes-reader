@@ -8,11 +8,11 @@ import './css/App.css';
 
 function App() {
   const [stories, setStories] = useState([])
-  const [clickedStory, setClickedStory] = useState(null);
 
   useEffect(() => {
-    fetchStories().then(results => setStories(results.map(story => {
+    fetchStories().then(results => setStories(results.map((story, index) => {
       return {
+        id: index,
         section: story.section,
         title: story.title,
         abstract: story.abstract,
@@ -25,14 +25,14 @@ function App() {
     })))
   }, [])
 
-  //handleClick on storycard
+  const findClickedStory = (id) => stories.find(story => story.id === Number(id))
 
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path='/' element={<StoryContainer stories={stories}/>} />
-        <Route path='/:storyKey' element={<StoryPage />} />
+        <Route path='/:storyId' element={<StoryPage findClickedStory={findClickedStory}/>} />
       </Routes>
     </div>
   );
