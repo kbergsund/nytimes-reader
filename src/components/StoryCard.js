@@ -1,8 +1,11 @@
-const StoryCard = ({ title }) => {
+import '../css/StoryCard.css';
+
+const StoryCard = ({ title, byline, image, alt }) => {
   return(
     <section className='story-card'>
       <h2>{title}</h2>
-      <p>Description</p>
+      <p>{byline}</p>
+      <img src={image} alt={alt} />
     </section>
   )
 }
